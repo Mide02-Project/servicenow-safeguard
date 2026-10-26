@@ -1,10 +1,10 @@
 # SafeGuard: Employee Safety, Incident and Compliance Management Platform
 
-![SafeGuard logo](assets/safeguard-logo.png)
+![SafeGuard logo](safeguardogo.jpeg)
 
-SafeGuard is a ServiceNow platform for managing workplace safety end-to-end, built as Team Lead of Team Momentum for RiseUp with ServiceNow, on instance dev425137. It covers incident and near-miss reporting, investigations, corrective action tracking, risk assessment, inspections, PPE and training requests, an AI assistant layered across both portals, a live safety map with department QR codes, and Slack-based approvals.
+SafeGuard is a ServiceNow platform for end-to-end workplace safety management, built as Team Lead of Team Momentum for RiseUp with ServiceNow on instance dev425137. It covers incident and near-miss reporting, investigations, corrective action tracking, risk assessment, inspections, PPE and training requests, an AI assistant layered across both portals, a live safety map with department QR codes, and Slack-based approvals.
 
-I designed it around a real question: what happens to a hazard between the moment it's noticed and the moment it's actually fixed. Most of the build exists to make that gap visible and accountable rather than something that lives in one person's memory. I kept the data model deliberately separated by concern (an incident is a fact, a corrective action is a task, an approval only exists where a real decision is being made) rather than forcing every workflow through one generic pattern.
+I designed it around a real question: what happens to a hazard between the moment it's noticed and the moment it's actually fixed. Most of the build makes that gap visible and accountable, rather than letting it live in one person's memory. I kept the data model deliberately separated by concern (an incident is a fact, a corrective action is a task, an approval only exists where a real decision is being made) rather than forcing every workflow through one generic pattern.
 
 ## What it does
 
@@ -76,7 +76,7 @@ Full build in [`docs/architecture.md`](docs/architecture.md) and [`docs/workflow
 
 - Navy-to-teal branding with a shield logo
 - Home page: hero banner, three action buttons, QR code widget, recent reports, FAQ, footer
-- Time-based greeting (morning/afternoon / evening)
+- Time-based greeting (morning/afternoon/evening)
 - My Reports page with tabs
 - Navigation bar widget with dropdown menus
 - Nine department QR codes, each linking to a quick-report page (`sg_quick_report?department=`) pre-filled for that department, with emergency numbers 999 and 111 shown
