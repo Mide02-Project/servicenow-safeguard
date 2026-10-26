@@ -1,6 +1,6 @@
 # SafeGuard: Employee Safety, Incident and Compliance Management Platform
 
-![SafeGuard logo](safeguard logo.jpeg)
+![SafeGuard logo](assets/safeguard-logo.png)
 
 SafeGuard is a ServiceNow platform for end-to-end workplace safety management, built as Team Lead of Team Momentum for RiseUp with ServiceNow on instance dev425137. It covers incident and near-miss reporting, investigations, corrective action tracking, risk assessment, inspections, PPE and training requests, an AI assistant layered across both portals, a live safety map with department QR codes, and Slack-based approvals.
 
