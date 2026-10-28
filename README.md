@@ -111,21 +111,21 @@ Built on Google Gemini, server-side only. Full details in [`docs/architecture.md
 
 | Scenario | Evidence | Status |
 |---|---|---|
-| New incident created, acknowledgement and manager notification sent | `screenshots/TC01-incident-created` | Pending capture |
-| High-severity incident auto-flags investigation required | `screenshots/TC02-high-severity-flag` | Pending capture |
-| Corrective action created on investigation outcome | `screenshots/TC03-corrective-action-creation` | Pending capture |
-| Near miss escalation on high risk rating | `screenshots/TC04-near-miss-escalation` | Pending capture |
-| High or critical incident posts an alert to the Slack safety channel | `screenshots/TC05-slack-incident-alert` | Pending capture |
-| Training compliance reminders fire at 60/30 days and on expiry | `screenshots/TC06-training-compliance` | Pending capture |
-| Daily overdue check flags a lapsed corrective action | `screenshots/TC07-overdue-check` | Pending capture |
-| Department QR code opens a pre-filled quick report | `screenshots/TC08-qr-quick-report` | Pending capture |
-| Safety Map plots and filters by role | `screenshots/TC09-safety-map` | Pending capture |
-| Employee AI Assistant answers a reporting question | `screenshots/TC10-ai-employee-assistant` | Pending capture |
-| Manager AI Assistant returns a live table query result | `screenshots/TC11-ai-manager-assistant` | Pending capture |
+| New incident created, acknowledgement and manager notification sent | `screenshots/TC01-incident-created` | Passed |
+| High-severity incident auto-flags investigation required | `screenshots/TC02-high-severity-flag` | Passed |
+| Corrective action created on investigation outcome | `screenshots/TC03-corrective-action-creation` | Passed |
+| Near miss escalation on high risk rating | `screenshots/TC04-near-miss-escalation` | Passed |
+| High or critical incident posts an alert to the Slack safety channel | `screenshots/TC05-slack-incident-alert` | Passed |
+| Training compliance reminders fire at 60/30 days and on expiry | `screenshots/TC06-training-compliance` | Passed |
+| Daily overdue check flags a lapsed corrective action | `screenshots/TC07-overdue-check` | Passed |
+| Department QR code opens a pre-filled quick report | `screenshots/TC08-qr-quick-report` | Passed |
+| Safety Map plots and filters by role | `screenshots/TC09-safety-map` | Passed|
+| Employee AI Assistant answers a reporting question | `screenshots/TC10-ai-employee-assistant` | Passed |
+| Manager AI Assistant returns a live table query result | `screenshots/TC11-ai-manager-assistant` | Passed |
 
 Folder naming and screenshot conventions are in [`screenshots/README.md`](screenshots/README.md).
 
-I checked generated email records in the Personal Developer Instance Outbox. This project does not claim delivery to external mailboxes beyond Slack, where webhook delivery was verified directly.
+I checked generated email records in the Personal Developer Instance Outbox. This project does not claim delivery to external mailboxes beyond Slack, where I verified webhook delivery directly.
 
 ## Technology
 
