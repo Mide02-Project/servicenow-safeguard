@@ -16,7 +16,11 @@ SafeGuard is a single-scoped application in ServiceNow Studio. Each business pro
 
 ## Slack integration
 
-PPE Requests post to Slack with interactive Approve/Reject buttons (Slack Block Kit), sent via a Scripted REST API and Incoming Webhook rather than a simplified spoke action, since Block Kit's `blocks` payload needs to be sent as a raw request body. Button clicks hit a Scripted REST API in ServiceNow, which verifies the request, updates the PPE Request record's `status` field, and replies back to Slack.
+## Slack integration
+
+When an incident is rated high or critical, the incident flow posts an alert to a dedicated Slack channel through an Incoming Webhook, so safety managers are notified where they already work. The webhook URL is stored in a system property, not in the flow. Email notifications still go out alongside the Slack alert.
+
+Interactive Slack Approve/Reject buttons for PPE requests were attempted but not completed, so they are not part of this build. PPE approvals are handled inside the Management Portal.
 
 ## AI Assistant
 
