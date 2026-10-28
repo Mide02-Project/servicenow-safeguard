@@ -2,7 +2,7 @@
 
 ![SafeGuard logo](assets/safeguard-logo.png)
 
-SafeGuard is a ServiceNow platform for end-to-end workplace safety management, built as Team Lead of Team Momentum for RiseUp with ServiceNow on instance dev425137. It covers incident and near-miss reporting, investigations, corrective action tracking, risk assessment, inspections, PPE and training requests, an AI assistant layered across both portals, a live safety map with department QR codes, and Slack-based approvals.
+SafeGuard is a ServiceNow platform for end-to-end workplace safety management, built as Team Lead of Team Momentum for RiseUp with ServiceNow on instance dev425137. It covers incident and near-miss reporting, investigations, corrective action tracking, risk assessment, inspections, PPE and training requests, an AI assistant layered across both portals, a live safety map with department QR codes, and Slack alerts for high and critical incidents.
 
 I designed it around a real question: what happens to a hazard between the moment it's noticed and the moment it's actually fixed. Most of the build makes that gap visible and accountable, rather than letting it live in one person's memory. I kept the data model deliberately separated by concern (an incident is a fact, a corrective action is a task, an approval only exists where a real decision is being made) rather than forcing every workflow through one generic pattern.
 
@@ -14,7 +14,7 @@ I designed it around a real question: what happens to a hazard between the momen
 - Supports five additional request types through the Service Catalog: Risk Assessment, Safety Inspection, Safety Consultation, PPE Request, and Training.
 - Sends a full notification lifecycle by email for serious incidents, corrective action assignment, investigation assignment, training expiry, high-risk near misses, and corrective action completion.
 - Runs a daily overdue sweep and a weekly training compliance check (60-day and 30-day warnings, plus expiry), and a monthly summary report.
-- Sends PPE requests to Slack with interactive Approve / Reject buttons that write the decision straight back to the record through a Scripted REST API.
+- Posts a Slack alert to a dedicated safety channel for every high or critical incident, so safety managers are notified straight away.
 - Presents two distinct portals from the same data: an Employee Portal for reporting and tracking, and a Management Portal for oversight, approvals, and KPIs.
 - Plots incidents, near misses, and risk assessments on a Safety Map, colour-coded and role-filtered, with nine department QR codes that open a quick-report page pre-filled for that department.
 - Runs an AI assistant, built on Google Gemini, present on both portals and on individual forms, scoped separately for employees and managers.
@@ -58,7 +58,7 @@ Full build in [`docs/architecture.md`](docs/architecture.md) and [`docs/workflow
 - 2 Scheduled Jobs: daily status check, weekly training summary
 - 6 Email Notifications: serious incident, corrective action assigned, investigation assigned, training expired, high-risk near miss, corrective action completed
 - 4 Client Scripts: incident type helper, corrective action section control, near miss risk calculator, severity trigger
-- Slack Approve/Reject buttons for PPE Requests, via Scripted REST API and Incoming Webhook
+- Slack alert to a safety channel for every high or critical incident, via Incoming Webhook
 
 ## Security
 
@@ -115,7 +115,7 @@ Built on Google Gemini, server-side only. Full details in [`docs/architecture.md
 | High-severity incident auto-flags investigation required | `screenshots/TC02-high-severity-flag` | Pending capture |
 | Corrective action created on investigation outcome | `screenshots/TC03-corrective-action-creation` | Pending capture |
 | Near miss escalation on high risk rating | `screenshots/TC04-near-miss-escalation` | Pending capture |
-| PPE request approved via Slack button | `screenshots/TC05-slack-ppe-approval` | Pending capture |
+| High or critical incident posts an alert to the Slack safety channel | `screenshots/TC05-slack-incident-alert` | Pending capture |
 | Training compliance reminders fire at 60/30 days and on expiry | `screenshots/TC06-training-compliance` | Pending capture |
 | Daily overdue check flags a lapsed corrective action | `screenshots/TC07-overdue-check` | Pending capture |
 | Department QR code opens a pre-filled quick report | `screenshots/TC08-qr-quick-report` | Pending capture |
@@ -134,7 +134,7 @@ I checked generated email records in the Personal Developer Instance Outbox. Thi
 - Flow Designer, Decision Tables, Subflows, Business Rules, Scheduled Jobs, Client Scripts
 - Service Catalog, Record Producers
 - Service Portal, custom widgets across Employee and Management portals
-- Scripted REST API, Slack Incoming Webhooks, Slack Interactivity
+- Scripted REST API, Slack Incoming Webhooks
 - Google Gemini via REST Message, Script Include-based AI service layer
 - Roles, ACLs, and application scope security
 
