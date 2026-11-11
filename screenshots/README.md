@@ -6,7 +6,7 @@ The 25 screenshots demonstrate the application's employee portal, incident repor
 
 All people, locations and records shown are fictional sample data.
 
-**[View the Complete SafeGuard Screenshot Gallery (PDF)](screenshots/SafeGuard-Gallery.pdf)**
+**[View the Complete SafeGuard Screenshot Gallery (PDF)](SafeGuard-Gallery.pdf)**
 
 ## 1. Employee Experience and Portal
 
