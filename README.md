@@ -119,7 +119,7 @@ Built on Google Gemini, server-side only. Full details in [`docs/architecture.md
 | Training compliance reminders fire at 60/30 days and on expiry | `screenshots/TC06-training-compliance` | Passed |
 | Daily overdue check flags a lapsed corrective action | `screenshots/TC07-overdue-check` | Passed |
 | Department QR code opens a pre-filled quick report | `screenshots/TC08-qr-quick-report` | Passed |
-| Safety Map plots and filters by role | `screenshots/TC09-safety-map` | Passed|
+| Slack alert | `screenshots/TC09-slack alert` | Passed|
 | Employee AI Assistant answers a reporting question | `screenshots/TC10-ai-employee-assistant` | Passed |
 | Manager AI Assistant returns a live table query result | `screenshots/TC11-ai-manager-assistant` | Passed |
 
